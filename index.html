@@ -1,0 +1,214 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="css/Juego_de_caballos.css">
+<style>
+
+body {
+    background-color: #70d64b;
+    font-family: Arial;
+    text-align: center;
+    color: #542d16;
+}
+
+h1 {
+    background-color: #eeb15c;
+    border: 5px solid #713b15;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px;
+    font-size: 38px;
+}
+
+h2 {
+    color: #542d16;
+}
+
+.seleccion {
+    background-color: #fff0d5;
+    border: 4px solid #754018;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 15px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.jugadores td {
+    width: 160px;
+    height: 130px;
+    border-right: 3px solid #c6a77c;
+    background-color: #fff0d5;
+}
+
+input[type="text"] {
+    width: 110px;
+    padding: 7px;
+}
+
+input[type="color"] {
+    width: 45px;
+    height: 30px;
+}
+
+button {
+    background-color: #00c83b;
+    color: white;
+    border: 3px solid darkgreen;
+    border-radius: 15px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pista {
+    background-color: #bd813e;
+    padding: 8px;
+}
+
+.pista td {
+    width: 55px;
+    height: 45px;
+    border: 3px solid #754018;
+    background-color: #ffe8c2;
+}
+
+.caballo {
+    font-size: 28px;
+}
+
+.meta {
+    background-color: black !important;
+    color: white;
+    font-weight: bold;
+    width: 55px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🐎 CARRERA DE CABALLOS 🐎</h1>
+
+<div class="seleccion">
+
+<h2>Selecciona tu jugador</h2>
+
+<table class="jugadores">
+
+<tr>
+
+<td>
+<span style="color:red;font-size:35px">🔴</span>
+<br>
+<b>Jugador 1</b>
+<input type="text" id = "Jugador1" name = "Jugador1" value = "Jugador1">
+<br><br>
+<input type="color" id = "color1" name = "color1">
+</td>
+
+<td>
+<span style="color:blue;font-size:35px">🔵</span>
+<br>
+<b>Jugador 2</b>
+<input type="text" id = "Jugador2" name = "Jugador2" value = "Jugador2">
+<br><br>
+<input type="color" id = "color2" name = "color2">
+</td>
+
+<td>
+<span style="color:green;font-size:35px">🟢</span>
+<br>
+<b>Jugador 3</b>
+<input type="text" id = "Jugador3" name = "Jugador3" value = "Jugador3">
+
+<br><br>
+<input type="color" id = "color3" name = "color3">
+</td>
+
+<td>
+<span style="color:orange;font-size:35px">🟠</span>
+<br>
+<b>Jugador 4</b>
+<input type="text" id = "Jugador4" name = "Jugador4" value = "Jugador4">
+<br><br>
+<input type="color" id = "color4" name = "color4">
+</td>
+
+</tr>
+
+</table>
+
+<br>
+
+Número de jugadores:
+
+<select>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+</select>
+
+&nbsp;&nbsp;
+
+Número de casillas:
+
+<select>
+<option>15</option>
+<option>20</option>
+<option>25</option>
+<option>30</option>
+</select>
+
+</div>
+
+<h2>🏁 CARRERA 🏁</h2> 
+<button onclick="Iniciar()">🏁 Iniciar </button>
+<br><br>
+<table class="pista">
+
+<tr>
+<td class="caballo"></td>
+<td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td class="meta">META</td>
+</tr>
+
+<tr>
+<td class="caballo"></td>
+<td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td class="meta">META</td>
+</tr>
+
+<tr>
+<td class="caballo"></td>
+<td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td class="meta">META</td>
+</tr>
+
+<tr>
+<td class="caballo"></td>
+<td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td class="meta">META</td>
+</tr>
+
+</table>
+
+<br><br>
+<button onclick="tirar()">🏁 ¡TIRAR!</button> <a id ="lbl_aviso">
+<script src="js/carrera.js"></script>
+
+</body>
+</html>
